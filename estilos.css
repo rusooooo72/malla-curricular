@@ -1,1 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    padding: 20px;
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+    color: #0d6efd;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+.contenedor-malla {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.semestre {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.semestre:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.semestre h2 {
+    text-align: center;
+    color: #343a40;
+    margin-top: 0;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #0d6efd;
+    padding-bottom: 10px;
+}
+
+.ramo {
+    background: #f8f9fa;
+    margin: 8px 0;
+    padding: 12px 15px;
+    border-left: 5px solid #0d6efd;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    font-size: 15px;
+}
+
+.ramo:hover {
+    background: #e9ecef;
+    border-left-color: #0b5ed7;
+}
+
+/* --- RAMO APROBADO --- */
+.aprobado {
+    text-decoration: line-through;
+    background: #198754;
+    border-left-color: #146c43;
+    color: #fff;
+    font-weight: 700;
+}
+
+/* --- RAMO BLOQUEADO --- */
+.ramo.bloqueado {
+    background-color: #f8f9fa;
+    border-left-color: #adb5bd;
+    color: #6c757d;
+    cursor: not-allowed;
+    text-decoration: none;
+}
+
+.ramo.bloqueado:hover {
+    background-color: #f8f9fa;
+    border-left-color: #adb5bd;
+}
+
+
+/* --- MENSAJE INFORMATIVO --- */
+.mensaje-malla {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    text-align: center;
+    font-weight: 700;
+    color: white;
+    font-size: 18px;
+    margin: 20px auto;
+    padding: 12px 20px;
+    border-radius: 8px;
+    pointer-events: none;
+    max-width: 90%;
+}
+
+.mensaje-malla.visible {
+    opacity: 1;
+}
+
+.mensaje-malla.felicitacion {
+    background-color: #198754;
+}
+
+.mensaje-malla.error {
+    background-color: #dc3545;
+}
+
+.footer-text {
+    text-align: center;
+    margin-top: 40px;
+    font-style: italic;
+    color: #6c757d;
+}
