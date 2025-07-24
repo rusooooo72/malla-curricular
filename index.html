@@ -1,1 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Malla de Ejemplo - Ingeniería</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <h1>🎓 Malla de Ingeniería en Computación 🎓</h1>
+    <div id="mensaje-malla" class="mensaje-malla"></div>
+    
+    <div class="contenedor-malla">
+        <div class="semestre">
+            <h2>Semestre 1</h2>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="calc1">Cálculo I</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="algebra1">Álgebra I</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="prog1">Fundamentos de Programación</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="intro-ing">Introducción a la Ingeniería</div>
+        </div>
 
+        <div class="semestre">
+            <h2>Semestre 2</h2>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="calc2" data-requisitos="calc1">Cálculo II</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="algebra2" data-requisitos="algebra1">Álgebra II</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="prog2" data-requisitos="prog1">Programación Avanzada</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="fisica1" data-requisitos="calc1,algebra1">Física I</div>
+        </div>
+
+        <div class="semestre">
+            <h2>Semestre 3</h2>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="calc3" data-requisitos="calc2">Cálculo III</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="fisica2" data-requisitos="fisica1,calc2">Física II</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="estruct-datos" data-requisitos="prog2">Estructuras de Datos</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="met-ing">Metodologías de la Ingeniería</div>
+        </div>
+
+        <div class="semestre">
+            <h2>Semestre 4</h2>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="ecu-dif" data-requisitos="calc3">Ecuaciones Diferenciales</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="circuitos" data-requisitos="fisica2">Circuitos Eléctricos</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="bases-datos" data-requisitos="estruct-datos">Bases de Datos</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="algoritmos" data-requisitos="estruct-datos">Análisis de Algoritmos</div>
+        </div>
+    </div>
+    
+    <p class="footer-text">
+        ✨ ¡Sigue así y alcanzarás todas tus metas! ✨
+    </p>
+
+    <script src="script.js"></script>
+</body>
+</html>
